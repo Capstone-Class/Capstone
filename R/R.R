@@ -18,7 +18,8 @@ n2t <- function(x) { format(as.POSIXct(x, origin = "1970-01-01 09:00:00", tz="UT
 #------------------------------------------data------------------------------------------#
 
 key = "005930"
-url = paste0("https://fchart.stock.naver.com/sise.nhn?symbol=", key, "&timeframe=day&count=1000&requestType=0")
+count="1000" #카운트 생성 (filter 제거용)#
+url = paste0("https://fchart.stock.naver.com/sise.nhn?symbol=", key, "&timeframe=day&count=",count,"&requestType=0")
 data = GET(url) %>% read_html %>% html_nodes("item") %>% html_attr("data") %>% strsplit("\\|")
 
 #------------------------------------------data-preprocessing------------------------------------------#
@@ -29,15 +30,18 @@ df$y = df$y %>% as.double()
 df$ds = paste(paste0(substr(df$ds, 1, 4), "-", substr(df$ds, 5, 6), "-", substr(df$ds, 7, 8)), "00:00:00")
 df$ds_value = t2n(df$ds)
 
-df = data.table( df %>% filter(y != 0) %>% filter( ds >= "2019-05-27" ) ); nrow(df)
+df = data.table( df %>% filter(y != 0)); nrow(df) #필터 제거#
 n_pred = 90
 df = rbind(df, data.table( ds = n2t( (seq( t2n(tail(df, 1)$ds) + 60*60*24*1, t2n(tail(df, 1)$ds) + 60*60*24*(n_pred), by = 60*60*24)) ), y= NA, ds_value = NA ))
 df$ds_value = t2n(df$ds)
+#df 값 YYYY-MM-DD for a date, or YYYY-MM-DD HH:MM:SS 형식으로 변경#
 
 #------------------------------------------modeling------------------------------------------#
 
 m = prophet( na.omit(df) , yearly.seasonality=T, weekly.seasonality = TRUE, daily.seasonality = TRUE )
-m_pred = predict(m, df )
+#m을 prophet 함수를 적용한 df값을 지정 #
+m_pred = predict(m, df)
+#future <- make_future_dataframe(m, periods = 365)랑 동일한 듯#
 df$yhat = m_pred$yhat
 df$yhat_lower = m_pred$yhat_lower
 df$yhat_upper = m_pred$yhat_upper
