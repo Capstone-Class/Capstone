@@ -28,6 +28,7 @@
 
 
 ```c
+#------------------------------------------data------------------------------------------#
 key = "005930"
 count="1000" #카운트 생성 (filter 제거용)#
 url = paste0("https://fchart.stock.naver.com/sise.nhn?symbol=", key, "&timeframe=day&count=",count,"&requestType=0")
