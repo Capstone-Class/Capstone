@@ -33,6 +33,27 @@ count="1000" #카운트 생성 (filter 제거용)#
 url = paste0("https://fchart.stock.naver.com/sise.nhn?symbol=", key, "&timeframe=day&count=",count,"&requestType=0")
 data = GET(url) %>% read_html %>% html_nodes("item") %>% html_attr("data") %>% strsplit("\\|")
 ```
+## 프로젝트 간 주식 선정기준 
+ 
+### 코스피 200 
+
+- 한국거래소가 시가총액이 크고 거래량이 많아 코스피를 대표할 수 있는 종목 200개를 선정함  
+
+#### 시가총액이 가장 높은 6개 종목 
+
+1. 삼성전자 
+
+2. sk하이닉스
+
+3. LG화학
+
+4. NAVER 
+
+5. 삼성바이오로직스 
+
+6. 카카오 
+
+
 
 ## 관련 이론
 
