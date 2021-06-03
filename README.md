@@ -97,14 +97,15 @@ Prophet 모델은 트렌드(growth), 계절성(seasonality), 휴일(holidays) 3�
   
 
 
+##### 참고자료
+ 
+  https://facebook.github.io/prophet/
 
-https://facebook.github.io/prophet/
+  https://facebook.github.io/prophet/docs/quick_start.html#r-api
 
-https://facebook.github.io/prophet/docs/quick_start.html#r-api
+  https://m-insideout.tistory.com/m/13
 
-https://m-insideout.tistory.com/m/13
-
-https://kerpect.tistory.com/161
+  https://kerpect.tistory.com/161
 
 
  
