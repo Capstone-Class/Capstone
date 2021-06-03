@@ -22,13 +22,19 @@
    ![screensh](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FZ6zvw%2Fbtqz5yPBMuy%2FDhpZtrXQrtIwEF4WJMzrS1%2Fimg.png)
 
 
+
+
 6. 아래의 키 값 부분에 원하는 주식의 종목 값을 넣은 후 코드를 전체 지정 후 Run을 클릭해 코드를 실행합니다.  
 
+
 ```c
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=발급받은 APP KEY를 넣으시면 됩니다."></script>
+key = "005930"
+count="1000" #카운트 생성 (filter 제거용)#
+url = paste0("https://fchart.stock.naver.com/sise.nhn?symbol=", key, "&timeframe=day&count=",count,"&requestType=0")
+data = GET(url) %>% read_html %>% html_nodes("item") %>% html_attr("data") %>% strsplit("\\|")
 ```
 
----
+
 ### 시계열데이터 
 
 
@@ -100,37 +106,7 @@ https://m-insideout.tistory.com/m/13
 https://kerpect.tistory.com/161
 
 
-   
-
-   
-
----
-## OPEN API
-### 카카오 맵 API
-
-```c
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=발급받은 APP KEY를 넣으시면 됩니다."></script>
-```
-발급받은 JavaScript 키를 지도 API의 appkey로 사용하였습니다. 
-
-웹페이지 내 지도 기능이 활성화하여 문화 속 장소를 보여줌으로 이용자가 장소에 대한 흥미를 생기도록 합니다.  
-
-
-### 신화, 전설, 민담 API
-
-제주 문화 원형에 분류되어 있는 신화, 전설, 민담에 대한 이야기를 PDF 형식으로 볼 수 있습니다. 
-
-제주어와 표준어 두 가지 언어로 쓰인 이야기들로 인해 비교하면서 접하게 되면서 자연스럽게 제주어에 대한 흥미를 이끌어 냅니다. 
-
----
-## OPEN SOURCE
-### [PDF.js](https://github.com/mozilla/pdf.js)
-
-PDF.js는 PDF 구문 분석 및 렌더링을위한 범용 웹 표준 기반 플랫폼을 만드는 목표를 하는 HTML5로 빌드 된 PDF뷰어 오픈소스입니다. 
-
-오픈소스를 통해 브라우저 내장 PDF 뷰어가 없는 환경에서 사용할 수 있도록 지원하며 이를 통해 신화, 전설, 민담에 대한 PDF 파일을 볼 수 있게 했습니다. 
-
----
+ 
 ## TO-DO list 
 
 추후 개발이 더 필요한 리스트 목록입니다. 
