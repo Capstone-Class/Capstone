@@ -74,7 +74,7 @@ data = GET(url) %>% read_html %>% html_nodes("item") %>% html_attr("data") %>% s
    
 ##### 특징
 
-Prophet 모델은 트렌드(growth), 계절성(seasonality), 휴일(holidays) 3가지의 주요 구성요소로 이루어져있습니다. 
+   Prophet 모델은 트렌드(growth), 계절성(seasonality), 휴일(holidays) 3가지의 주요 구성요소로 이루어져있습니다. 
 
    ![screensh](https://blog.kakaocdn.net/dn/ckx2T5/btqE0O1Y3KX/BWkezapdPL0QwtQH8TroIk/img.png)
      
