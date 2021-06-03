@@ -10,7 +10,7 @@
 
 1. [R](https://cran.r-project.org)에 들어가서 Download for R Windows -> base -> Download R 버전정보 for Windows 을 클릭하여 설치합니다.  
 
-2. [RStudio](https://www.rstudio.com/products/rstudio/download/)에 들어가서 
+2. [RStudio](https://www.rstudio.com/products/rstudio/download/)에 들어가서 RStudio Desktop(Free) Download를 클릭합니다.
 
 3. Capstone 저장소에서 자신의 원격 저장소로 fork합니다.
 
