@@ -137,4 +137,4 @@ data = GET(url) %>% read_html %>% html_nodes("item") %>% html_attr("data") %>% s
 ## License and Copyright
 ### Apache License 2.0
 
-Copyright [prophet](https://github.com/facebook/prophet) under the [Apache License 2.0](http://www.apache.org/licenses/).
+Copyright [Prophet](https://github.com/facebook/prophet) under the [Apache License 2.0](http://www.apache.org/licenses/).
