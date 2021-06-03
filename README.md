@@ -33,6 +33,7 @@ count="1000" #카운트 생성 (filter 제거용)#
 url = paste0("https://fchart.stock.naver.com/sise.nhn?symbol=", key, "&timeframe=day&count=",count,"&requestType=0")
 data = GET(url) %>% read_html %>% html_nodes("item") %>% html_attr("data") %>% strsplit("\\|")
 ```
+
 ## 프로젝트 간 주식 선정기준 
  
 ### 코스피 200 
@@ -54,6 +55,7 @@ data = GET(url) %>% read_html %>% html_nodes("item") %>% html_attr("data") %>% s
 6. 카카오 
 
 
+---
 
 ## 관련 이론
 
@@ -129,7 +131,8 @@ data = GET(url) %>% read_html %>% html_nodes("item") %>% html_attr("data") %>% s
   https://kerpect.tistory.com/161
 
 
- 
+---
+
 ## TO-DO list 
 
 추후 개발이 더 필요한 리스트 목록입니다. 
