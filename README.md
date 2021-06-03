@@ -21,6 +21,13 @@
    ![screensh](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FLL2RW%2Fbtqz5auCGn1%2FOkjDryrdEzOJ1xRjtOheE1%2Fimg.png)
    ![screensh](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FZ6zvw%2Fbtqz5yPBMuy%2FDhpZtrXQrtIwEF4WJMzrS1%2Fimg.png)
 
+
+6. 아래의 키 값 부분에 원하는 주식의 종목 값을 넣은 후 코드를 전체 지정 후 Run을 클릭해 코드를 실행합니다.  
+
+```c
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=발급받은 APP KEY를 넣으시면 됩니다."></script>
+```
+
 ---
 ### 시계열데이터 
 
