@@ -17,7 +17,7 @@
 4. git Bash를 실행 한 뒤 원격 저장소에서 로컬 저장소(Capstone 디렉토리)로 가져옵니다.<br>(git clone https://github.com/깃헙사용자아이디/Capstone.git)
 
 5. RStudio를 실행 뒤 R.R 파일을 연 뒤 아래의 사진처럼 필요한 패키지들을 설치합니다. <br> 
-   (lubridate, httr, rvest, xts, data.table, dplyr, prophet)
+   (lubridate, httr, rvest, xts, data.table, dplyr, prophet) <br>
    ![screensh](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FLL2RW%2Fbtqz5auCGn1%2FOkjDryrdEzOJ1xRjtOheE1%2Fimg.png)
    ![screensh](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FZ6zvw%2Fbtqz5yPBMuy%2FDhpZtrXQrtIwEF4WJMzrS1%2Fimg.png)
 
