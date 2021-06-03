@@ -16,7 +16,10 @@
 
 4. git Bash를 실행 한 뒤 원격 저장소에서 로컬 저장소(Capstone 디렉토리)로 가져옵니다.<br>(git clone https://github.com/깃헙사용자아이디/Capstone.git)
 
-5. 
+5. RStudio를 실행 뒤 R.R 파일을 연 뒤 아래의 그림에서 패키지들을 설치합니다. <br> 
+   (lubridate, httr, rvest, xts, data.table, dplyr, prophet)
+   
+
 
 
    
