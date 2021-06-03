@@ -33,7 +33,7 @@ count="1000" #카운트 생성 (filter 제거용)#
 url = paste0("https://fchart.stock.naver.com/sise.nhn?symbol=", key, "&timeframe=day&count=",count,"&requestType=0")
 data = GET(url) %>% read_html %>% html_nodes("item") %>% html_attr("data") %>% strsplit("\\|")
 ```
-
+## 관련 이론
 
 ### 시계열데이터 
 
