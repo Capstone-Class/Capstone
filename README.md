@@ -45,7 +45,7 @@ data = GET(url) %>% read_html %>% html_nodes("item") %>% html_attr("data") %>% s
 
 1. 삼성전자 (005930)
 
-2. sk하이닉스 (000660)
+2. 하이닉스 (000660)
 
 3. LG화학 (051910)
 
