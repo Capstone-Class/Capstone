@@ -1,5 +1,4 @@
 rm(list=ls())
-
 #------------------------------------------library------------------------------------------#
 library(lubridate)
 library(httr)
@@ -51,6 +50,3 @@ abline(h = yprt, col = adjustcolor("gray", 0.9), lty = 4)
 rect(head(df %>% filter(is.na(y)), 1)$ds_value, ylim[1], tail(df %>% filter(is.na(y)), 1)$ds_value, ylim[2], col = adjustcolor("pink", 0.5), border=NA)
 lines(df$ds_value, df$yhat, lty = 4, lwd = 1)
 legend("topleft", c("예측 영역", "yhat"), pch = c(15, NA), lty = c(NA, 4), col = c("pink", "black"), bty="n" )
-
-save(df, m, future, file = "stok_prophet.RData")
-
